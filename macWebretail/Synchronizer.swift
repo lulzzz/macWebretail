@@ -173,7 +173,7 @@ class Synchronizer {
 	// MARK: - Notification
 	
 	func push(title: String, message: String) {
-		print("\(title): \(message)")
+		//print("\(title): \(message)")
 		let notification = NSUserNotification()
 		notification.title = title
 		notification.informativeText = message

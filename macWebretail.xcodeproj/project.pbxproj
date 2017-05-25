@@ -74,19 +74,19 @@
 			isa = PBXGroup;
 			children = (
 				56CDBAEE1ED659080027D91D /* macWebretail.entitlements */,
+				568A1B7D1ECF9509005C29CF /* Info.plist */,
+				56B933281ED704C90043D196 /* AppDelegate.swift */,
+				56DBC86C1ED34692009FF9F3 /* CollectionViewItem.swift */,
+				56BCA3971ED5C96B004E956E /* Extensions.swift */,
+				56DBC8721ED36BB6009FF9F3 /* HeaderView.swift */,
 				56CDBAEC1ED64F260027D91D /* Synchronizer.swift */,
 				568A1B731ECF9509005C29CF /* ViewController.swift */,
+				56BCA3951ED5677F004E956E /* WindowController.swift */,
+				56B933261ED6F7930043D196 /* WindowTitleless.swift */,
 				568A1B781ECF9509005C29CF /* Assets.xcassets */,
-				568A1B7A1ECF9509005C29CF /* Main.storyboard */,
-				568A1B7D1ECF9509005C29CF /* Info.plist */,
-				56DBC86C1ED34692009FF9F3 /* CollectionViewItem.swift */,
 				56DBC86D1ED34692009FF9F3 /* CollectionViewItem.xib */,
 				56DBC8701ED36A81009FF9F3 /* HeaderView.xib */,
-				56DBC8721ED36BB6009FF9F3 /* HeaderView.swift */,
-				56BCA3951ED5677F004E956E /* WindowController.swift */,
-				56BCA3971ED5C96B004E956E /* Extensions.swift */,
-				56B933261ED6F7930043D196 /* WindowTitleless.swift */,
-				56B933281ED704C90043D196 /* AppDelegate.swift */,
+				568A1B7A1ECF9509005C29CF /* Main.storyboard */,
 			);
 			path = macWebretail;
 			sourceTree = "<group>";

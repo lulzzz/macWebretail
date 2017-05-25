@@ -19,7 +19,7 @@
                         <constraint firstAttribute="width" constant="120" id="iBb-jE-B6j"/>
                         <constraint firstAttribute="height" constant="20" id="pDs-R1-RMC"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Section" id="h5g-yv-j8j">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Date" id="h5g-yv-j8j">
                         <font key="font" metaFont="system" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -31,7 +31,7 @@
                         <constraint firstAttribute="height" constant="20" id="KRc-VI-KDz"/>
                         <constraint firstAttribute="width" constant="120" id="tdv-b7-Cte"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Rows count" id="tim-gs-Gs9">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Document count" id="tim-gs-Gs9">
                         <font key="font" metaFont="system" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

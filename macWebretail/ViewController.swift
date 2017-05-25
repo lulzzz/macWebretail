@@ -21,9 +21,8 @@ class ViewController: NSViewController {
 		configureCollectionView()
 	}
 	
-	override var representedObject: Any? {
-		didSet {
-		}
+	override func viewDidAppear() {
+		reloadData()
 	}
 	
 	public func reloadData() {
