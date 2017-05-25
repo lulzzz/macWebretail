@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Lod-yH-OBc">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="Wcb-LR-ssv">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="Lod-yH-OBc" customClass="WindowController" customModule="macWebretail" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="rye-wi-TUo" customClass="WindowTitleless" customModule="macWebretail" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES" fullSizeContentView="YES"/>
+                        <rect key="contentRect" x="800" y="398" width="640" height="480"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+                        <toolbar key="toolbar" implicitIdentifier="A69EC4FD-36F9-4A25-8AA3-A33F1B9BC240" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="qMz-09-sSK">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="lLj-6Y-EZx"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="v4a-nd-6nw"/>
+                                <toolbarItem implicitItemIdentifier="CD3FD6DF-FB00-400A-8167-E749B036D35E" label="" paletteLabel="Refresh" image="NSRefreshTemplate" id="hWE-Eb-bie">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="64" height="20"/>
+                                    <size key="maxSize" width="113" height="40"/>
+                                    <button key="view" verticalHuggingPriority="750" id="18G-dP-30t">
+                                        <rect key="frame" x="0.0" y="14" width="81" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="inline" bezelStyle="inline" image="NSRefreshTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zOZ-w5-woA">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="smallSystemBold"/>
+                                        </buttonCell>
+                                    </button>
+                                    <connections>
+                                        <action selector="refreshClicked:" target="Lod-yH-OBc" id="rEu-vN-tIj"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="6B719795-0C0D-4A34-8578-578196407A8D" label="" paletteLabel="Barcode" image="NSPathTemplate" id="UoM-Nn-b0l">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="64" height="20"/>
+                                    <size key="maxSize" width="113" height="40"/>
+                                    <button key="view" verticalHuggingPriority="750" id="LeZ-w1-mQe">
+                                        <rect key="frame" x="0.0" y="14" width="81" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="inline" bezelStyle="inline" image="NSPathTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VZ3-ka-4mx">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="smallSystemBold"/>
+                                        </buttonCell>
+                                    </button>
+                                    <connections>
+                                        <action selector="barcodeClicked:" target="Lod-yH-OBc" id="Oil-U8-oIs"/>
+                                    </connections>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="v4a-nd-6nw"/>
+                                <toolbarItem reference="UoM-Nn-b0l"/>
+                                <toolbarItem reference="hWE-Eb-bie"/>
+                            </defaultToolbarItems>
+                        </toolbar>
+                    </window>
+                    <connections>
+                        <outlet property="statusMenu" destination="ytH-qW-Vde" id="hd0-vA-ipv"/>
+                        <segue destination="RVu-Yd-wbl" kind="relationship" relationship="window.shadowedContentViewController" id="diB-pL-Uvn"/>
+                    </connections>
+                </windowController>
+                <customObject id="IOk-AD-Zup" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <menu id="ytH-qW-Vde">
+                    <items>
+                        <menuItem title="Show" image="NSShareTemplate" id="fxb-5i-Jp7">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="showClicked:" target="Lod-yH-OBc" id="Is4-82-808"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Refresh" image="NSRefreshTemplate" id="6ur-PP-GGj">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="refreshClicked:" target="Lod-yH-OBc" id="1NH-na-O6k"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Quit" image="NSStopProgressTemplate" id="W9s-iV-cwp">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="quitClicked:" target="Lod-yH-OBc" id="5gb-6W-lr4"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                </menu>
+            </objects>
+            <point key="canvasLocation" x="-357" y="11"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7x1-hv-eg6">
+            <objects>
+                <customObject id="2Ky-hD-SDQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController id="RVu-Yd-wbl" customClass="ViewController" customModule="macWebretail" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="dXP-nz-22t">
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r36-cX-Bx3">
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                                <clipView key="contentView" drawsBackground="NO" id="chJ-Gc-YdR">
+                                    <rect key="frame" x="1" y="1" width="638" height="478"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView selectable="YES" id="pnb-78-qJv">
+                                            <rect key="frame" x="0.0" y="0.0" width="638" height="478"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="5BB-x3-Thh">
+                                                <size key="itemSize" width="50" height="50"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="RVu-Yd-wbl" id="VmZ-yc-XBQ"/>
+                                                <outlet property="delegate" destination="RVu-Yd-wbl" id="Du8-Vg-kC9"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Rx1-4O-lGV">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="wGh-2L-mhR">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="46g-4g-Jsu">
+                                <rect key="frame" x="304" y="224" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </progressIndicator>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="r36-cX-Bx3" secondAttribute="trailing" id="0S2-3v-sc7"/>
+                            <constraint firstItem="r36-cX-Bx3" firstAttribute="leading" secondItem="dXP-nz-22t" secondAttribute="leading" id="Zj4-ac-ZTp"/>
+                            <constraint firstItem="r36-cX-Bx3" firstAttribute="top" secondItem="dXP-nz-22t" secondAttribute="top" id="ede-0u-qYB"/>
+                            <constraint firstAttribute="bottom" secondItem="r36-cX-Bx3" secondAttribute="bottom" id="mGy-ZD-0Pm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="pnb-78-qJv" id="EYB-wz-oaC"/>
+                        <outlet property="progressView" destination="46g-4g-Jsu" id="l7u-js-nqG"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="410" y="11"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSPathTemplate" width="16" height="10"/>
+        <image name="NSRefreshTemplate" width="11" height="15"/>
+        <image name="NSShareTemplate" width="11" height="16"/>
+        <image name="NSStopProgressTemplate" width="11" height="11"/>
+    </resources>
+</document>
