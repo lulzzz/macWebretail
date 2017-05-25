@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		568A1B721ECF9509005C29CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A1B711ECF9509005C29CF /* AppDelegate.swift */; };
 		568A1B741ECF9509005C29CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A1B731ECF9509005C29CF /* ViewController.swift */; };
-		568A1B771ECF9509005C29CF /* macWebretail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 568A1B751ECF9509005C29CF /* macWebretail.xcdatamodeld */; };
 		568A1B791ECF9509005C29CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568A1B781ECF9509005C29CF /* Assets.xcassets */; };
 		568A1B7C1ECF9509005C29CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A1B7A1ECF9509005C29CF /* Main.storyboard */; };
 		56B933271ED6F7930043D196 /* WindowTitleless.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B933261ED6F7930043D196 /* WindowTitleless.swift */; };
+		56B933291ED704C90043D196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B933281ED704C90043D196 /* AppDelegate.swift */; };
 		56BCA3961ED5677F004E956E /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCA3951ED5677F004E956E /* WindowController.swift */; };
 		56BCA3981ED5C96B004E956E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCA3971ED5C96B004E956E /* Extensions.swift */; };
 		56CDBAED1ED64F260027D91D /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDBAEC1ED64F260027D91D /* Synchronizer.swift */; };
@@ -25,13 +24,12 @@
 
 /* Begin PBXFileReference section */
 		568A1B6E1ECF9509005C29CF /* macWebretail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macWebretail.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		568A1B711ECF9509005C29CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		568A1B731ECF9509005C29CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		568A1B761ECF9509005C29CF /* macWebretail.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = macWebretail.xcdatamodel; sourceTree = "<group>"; };
 		568A1B781ECF9509005C29CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		568A1B7B1ECF9509005C29CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		568A1B7D1ECF9509005C29CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56B933261ED6F7930043D196 /* WindowTitleless.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowTitleless.swift; sourceTree = "<group>"; };
+		56B933281ED704C90043D196 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56BCA3951ED5677F004E956E /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		56BCA3971ED5C96B004E956E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		56CDBAEC1ED64F260027D91D /* Synchronizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
@@ -77,12 +75,10 @@
 			children = (
 				56CDBAEE1ED659080027D91D /* macWebretail.entitlements */,
 				56CDBAEC1ED64F260027D91D /* Synchronizer.swift */,
-				568A1B711ECF9509005C29CF /* AppDelegate.swift */,
 				568A1B731ECF9509005C29CF /* ViewController.swift */,
 				568A1B781ECF9509005C29CF /* Assets.xcassets */,
 				568A1B7A1ECF9509005C29CF /* Main.storyboard */,
 				568A1B7D1ECF9509005C29CF /* Info.plist */,
-				568A1B751ECF9509005C29CF /* macWebretail.xcdatamodeld */,
 				56DBC86C1ED34692009FF9F3 /* CollectionViewItem.swift */,
 				56DBC86D1ED34692009FF9F3 /* CollectionViewItem.xib */,
 				56DBC8701ED36A81009FF9F3 /* HeaderView.xib */,
@@ -90,6 +86,7 @@
 				56BCA3951ED5677F004E956E /* WindowController.swift */,
 				56BCA3971ED5C96B004E956E /* Extensions.swift */,
 				56B933261ED6F7930043D196 /* WindowTitleless.swift */,
+				56B933281ED704C90043D196 /* AppDelegate.swift */,
 			);
 			path = macWebretail;
 			sourceTree = "<group>";
@@ -184,15 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B933291ED704C90043D196 /* AppDelegate.swift in Sources */,
 				56DBC8731ED36BB6009FF9F3 /* HeaderView.swift in Sources */,
-				568A1B771ECF9509005C29CF /* macWebretail.xcdatamodeld in Sources */,
 				56DBC86E1ED34692009FF9F3 /* CollectionViewItem.swift in Sources */,
 				56B933271ED6F7930043D196 /* WindowTitleless.swift in Sources */,
 				56CDBAED1ED64F260027D91D /* Synchronizer.swift in Sources */,
 				56BCA3981ED5C96B004E956E /* Extensions.swift in Sources */,
 				56BCA3961ED5677F004E956E /* WindowController.swift in Sources */,
 				568A1B741ECF9509005C29CF /* ViewController.swift in Sources */,
-				568A1B721ECF9509005C29CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +308,7 @@
 				DEVELOPMENT_TEAM = 9DRA485AMF;
 				INFOPLIST_FILE = macWebretail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.grisolini.macWebretail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -329,6 +326,7 @@
 				DEVELOPMENT_TEAM = 9DRA485AMF;
 				INFOPLIST_FILE = macWebretail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.grisolini.macWebretail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -358,19 +356,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		568A1B751ECF9509005C29CF /* macWebretail.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				568A1B761ECF9509005C29CF /* macWebretail.xcdatamodel */,
-			);
-			currentVersion = 568A1B761ECF9509005C29CF /* macWebretail.xcdatamodel */;
-			path = macWebretail.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 568A1B661ECF9508005C29CF /* Project object */;
 }
