@@ -10,7 +10,7 @@
         <scene sceneID="Wcb-LR-ssv">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="Lod-yH-OBc" customClass="WindowController" customModule="macWebretail" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="rye-wi-TUo" customClass="WindowTitleless" customModule="macWebretail" customModuleProvider="target">
+                    <window key="window" title="Webretail" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="rye-wi-TUo" customClass="WindowTitleless" customModule="macWebretail" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES" fullSizeContentView="YES"/>
                         <rect key="contentRect" x="800" y="398" width="640" height="480"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
@@ -66,19 +66,27 @@
                 <customObject id="IOk-AD-Zup" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <menu id="ytH-qW-Vde">
                     <items>
-                        <menuItem title="Show" image="NSShareTemplate" id="fxb-5i-Jp7">
+                        <menuItem title="Show" image="NSStatusAvailable" id="fxb-5i-Jp7">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
                                 <action selector="showClicked:" target="Lod-yH-OBc" id="Is4-82-808"/>
                             </connections>
                         </menuItem>
-                        <menuItem title="Refresh" image="NSRefreshTemplate" id="6ur-PP-GGj">
+                        <menuItem title="Hide" image="NSStatusNone" id="6ur-PP-GGj">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <action selector="refreshClicked:" target="Lod-yH-OBc" id="1NH-na-O6k"/>
+                                <action selector="closeClicked:" target="Lod-yH-OBc" id="kAH-p1-7EB"/>
                             </connections>
                         </menuItem>
-                        <menuItem title="Quit" image="NSStopProgressTemplate" id="W9s-iV-cwp">
+                        <menuItem isSeparatorItem="YES" id="x98-MG-MH9"/>
+                        <menuItem title=" Refresh" image="NSRefreshTemplate" id="1Au-6E-Vum">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="refreshClicked:" target="Lod-yH-OBc" id="2bt-46-qrJ"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="CHj-ys-1b8"/>
+                        <menuItem title=" Exit" image="NSStopProgressTemplate" id="W9s-iV-cwp">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
                                 <action selector="quitClicked:" target="Lod-yH-OBc" id="5gb-6W-lr4"/>
@@ -152,7 +160,8 @@
     <resources>
         <image name="NSPathTemplate" width="16" height="10"/>
         <image name="NSRefreshTemplate" width="11" height="15"/>
-        <image name="NSShareTemplate" width="11" height="16"/>
+        <image name="NSStatusAvailable" width="16" height="16"/>
+        <image name="NSStatusNone" width="16" height="16"/>
         <image name="NSStopProgressTemplate" width="11" height="11"/>
     </resources>
 </document>

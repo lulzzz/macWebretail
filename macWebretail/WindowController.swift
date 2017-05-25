@@ -39,6 +39,10 @@ class WindowController: NSWindowController {
 		let viewController = self.contentViewController as! ViewController
 		viewController.reloadData()
 	}
+
+	@IBAction func closeClicked(_ sender: Any) {
+		self.window?.close()
+	}
 	
 	@IBAction func barcodeClicked(_ sender: NSToolbarItem) {
 		if Synchronizer.shared.movementId == 0 || Synchronizer.shared.isSyncing {
