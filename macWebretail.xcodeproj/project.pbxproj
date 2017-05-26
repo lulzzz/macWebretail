@@ -10,6 +10,7 @@
 		568A1B741ECF9509005C29CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A1B731ECF9509005C29CF /* ViewController.swift */; };
 		568A1B791ECF9509005C29CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568A1B781ECF9509005C29CF /* Assets.xcassets */; };
 		568A1B7C1ECF9509005C29CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A1B7A1ECF9509005C29CF /* Main.storyboard */; };
+		56B4E9F51ED839AE00931F83 /* BarcodePDFPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B4E9F41ED839AE00931F83 /* BarcodePDFPage.swift */; };
 		56B933271ED6F7930043D196 /* WindowTitleless.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B933261ED6F7930043D196 /* WindowTitleless.swift */; };
 		56B933291ED704C90043D196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B933281ED704C90043D196 /* AppDelegate.swift */; };
 		56BCA3961ED5677F004E956E /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCA3951ED5677F004E956E /* WindowController.swift */; };
@@ -28,6 +29,7 @@
 		568A1B781ECF9509005C29CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		568A1B7B1ECF9509005C29CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		568A1B7D1ECF9509005C29CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56B4E9F41ED839AE00931F83 /* BarcodePDFPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodePDFPage.swift; sourceTree = "<group>"; };
 		56B933261ED6F7930043D196 /* WindowTitleless.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowTitleless.swift; sourceTree = "<group>"; };
 		56B933281ED704C90043D196 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56BCA3951ED5677F004E956E /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				56DBC86D1ED34692009FF9F3 /* CollectionViewItem.xib */,
 				56DBC8701ED36A81009FF9F3 /* HeaderView.xib */,
 				568A1B7A1ECF9509005C29CF /* Main.storyboard */,
+				56B4E9F41ED839AE00931F83 /* BarcodePDFPage.swift */,
 			);
 			path = macWebretail;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				56DBC8731ED36BB6009FF9F3 /* HeaderView.swift in Sources */,
 				56DBC86E1ED34692009FF9F3 /* CollectionViewItem.swift in Sources */,
 				56B933271ED6F7930043D196 /* WindowTitleless.swift in Sources */,
+				56B4E9F51ED839AE00931F83 /* BarcodePDFPage.swift in Sources */,
 				56CDBAED1ED64F260027D91D /* Synchronizer.swift in Sources */,
 				56BCA3981ED5C96B004E956E /* Extensions.swift in Sources */,
 				56BCA3961ED5677F004E956E /* WindowController.swift in Sources */,

@@ -12,7 +12,7 @@
                 <windowController showSeguePresentationStyle="single" id="Lod-yH-OBc" customClass="WindowController" customModule="macWebretail" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Webretail" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="rye-wi-TUo" customClass="WindowTitleless" customModule="macWebretail" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES" fullSizeContentView="YES"/>
-                        <rect key="contentRect" x="800" y="398" width="640" height="480"/>
+                        <rect key="contentRect" x="800" y="398" width="640" height="640"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
                         <toolbar key="toolbar" implicitIdentifier="A69EC4FD-36F9-4A25-8AA3-A33F1B9BC240" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="qMz-09-sSK">
                             <allowedToolbarItems>
@@ -103,17 +103,17 @@
                 <customObject id="2Ky-hD-SDQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="RVu-Yd-wbl" customClass="ViewController" customModule="macWebretail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="dXP-nz-22t">
-                        <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="640"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r36-cX-Bx3">
-                                <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="640"/>
                                 <clipView key="contentView" drawsBackground="NO" id="chJ-Gc-YdR">
-                                    <rect key="frame" x="1" y="1" width="638" height="478"/>
+                                    <rect key="frame" x="1" y="1" width="638" height="638"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView selectable="YES" id="pnb-78-qJv">
-                                            <rect key="frame" x="0.0" y="0.0" width="638" height="478"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="638" height="638"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="5BB-x3-Thh">
                                                 <size key="itemSize" width="50" height="50"/>
@@ -136,15 +136,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="46g-4g-Jsu">
-                                <rect key="frame" x="304" y="224" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="46g-4g-Jsu">
+                                <rect key="frame" x="304" y="304" width="32" height="32"/>
                             </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="r36-cX-Bx3" secondAttribute="trailing" id="0S2-3v-sc7"/>
+                            <constraint firstItem="46g-4g-Jsu" firstAttribute="centerY" secondItem="r36-cX-Bx3" secondAttribute="centerY" id="7Ce-sO-6aO"/>
                             <constraint firstItem="r36-cX-Bx3" firstAttribute="leading" secondItem="dXP-nz-22t" secondAttribute="leading" id="Zj4-ac-ZTp"/>
                             <constraint firstItem="r36-cX-Bx3" firstAttribute="top" secondItem="dXP-nz-22t" secondAttribute="top" id="ede-0u-qYB"/>
+                            <constraint firstItem="46g-4g-Jsu" firstAttribute="centerX" secondItem="r36-cX-Bx3" secondAttribute="centerX" id="kqR-vj-9pI"/>
                             <constraint firstAttribute="bottom" secondItem="r36-cX-Bx3" secondAttribute="bottom" id="mGy-ZD-0Pm"/>
                         </constraints>
                     </view>
@@ -154,7 +155,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="410" y="11"/>
+            <point key="canvasLocation" x="399" y="11"/>
         </scene>
     </scenes>
     <resources>
