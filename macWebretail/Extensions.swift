@@ -77,7 +77,7 @@ extension Double {
 }
 
 extension Sequence {
-	func groupBy<G: Hashable>(closure: (Iterator.Element)->G) -> [G: [Iterator.Element]] {
+	func groupBy<G>(closure: (Iterator.Element)->G) -> [G: [Iterator.Element]] {
 		var results = [G: Array<Iterator.Element>]()
 		forEach {
 			let key = closure($0)

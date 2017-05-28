@@ -44,7 +44,7 @@ class WindowController: NSWindowController {
 		self.window?.close()
 	}
 	
-	@IBAction func barcodeClicked(_ sender: NSToolbarItem) {
+	@IBAction func barcodeClicked(_ sender: Any) {
 		if Synchronizer.shared.movementId == 0 || Synchronizer.shared.isSyncing {
 			return
 		}
