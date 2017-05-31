@@ -15,7 +15,7 @@
                     <window key="window" title="Webretail" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="rye-wi-TUo" customClass="WindowTitleless" customModule="macWebretail" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES" fullSizeContentView="YES"/>
                         <rect key="contentRect" x="800" y="398" width="640" height="640"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
                         <toolbar key="toolbar" implicitIdentifier="A69EC4FD-36F9-4A25-8AA3-A33F1B9BC240" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="qMz-09-sSK">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="lLj-6Y-EZx"/>
@@ -70,9 +70,6 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
                                         </buttonCell>
-                                        <connections>
-                                            <action selector="barcodeClicked:" target="Lod-yH-OBc" id="CJ5-6K-1ST"/>
-                                        </connections>
                                     </button>
                                 </viewController>
                                 <size key="designTimeSize" width="90" height="30"/>
@@ -85,9 +82,6 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
                                         </buttonCell>
-                                        <connections>
-                                            <action selector="refreshClicked:" target="Lod-yH-OBc" id="oMx-gd-afW"/>
-                                        </connections>
                                     </button>
                                 </viewController>
                                 <size key="designTimeSize" width="90" height="30"/>
@@ -102,23 +96,36 @@
                 <customObject id="IOk-AD-Zup" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <menu id="ytH-qW-Vde">
                     <items>
-                        <menuItem title="Show" image="NSStatusAvailable" id="fxb-5i-Jp7">
+                        <menuItem title="Webretail" image="NSHomeTemplate" id="fxb-5i-Jp7">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <action selector="showClicked:" target="Lod-yH-OBc" id="Is4-82-808"/>
+                                <action selector="openHome:" target="Lod-yH-OBc" id="fUj-fL-Oys"/>
                             </connections>
                         </menuItem>
-                        <menuItem title="Hide" image="NSStatusNone" id="6ur-PP-GGj">
+                        <menuItem title="Dashboard" image="NSIconViewTemplate" id="gKM-jq-Q5x">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <action selector="closeClicked:" target="Lod-yH-OBc" id="kAH-p1-7EB"/>
+                                <action selector="dashboardClicked:" target="Lod-yH-OBc" id="Kia-E4-wJM"/>
                             </connections>
                         </menuItem>
-                        <menuItem isSeparatorItem="YES" id="x98-MG-MH9"/>
                         <menuItem title=" Refresh" image="NSRefreshTemplate" id="1Au-6E-Vum">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <action selector="refreshClicked:" target="Lod-yH-OBc" id="2bt-46-qrJ"/>
+                                <action selector="refreshClicked:" target="Lod-yH-OBc" id="xxf-6i-mkY"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="UTN-zM-HK6"/>
+                        <menuItem title="Start server" image="NSStatusUnavailable" id="tyE-m7-vmJ">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="startStopWebretail:" target="Lod-yH-OBc" id="rzM-Mj-UcN"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="x98-MG-MH9"/>
+                        <menuItem title="Settings" image="NSActionTemplate" id="Wwg-gZ-NVa">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="settingsClicked:" target="Lod-yH-OBc" id="ofC-NQ-IH3"/>
                             </connections>
                         </menuItem>
                         <menuItem isSeparatorItem="YES" id="CHj-ys-1b8"/>
@@ -131,7 +138,7 @@
                     </items>
                 </menu>
             </objects>
-            <point key="canvasLocation" x="-357" y="11"/>
+            <point key="canvasLocation" x="-452" y="-263"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7x1-hv-eg6">
@@ -195,10 +202,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSHomeTemplate" width="14" height="14"/>
+        <image name="NSIconViewTemplate" width="10" height="10"/>
         <image name="NSPathTemplate" width="16" height="10"/>
         <image name="NSRefreshTemplate" width="11" height="15"/>
-        <image name="NSStatusAvailable" width="16" height="16"/>
-        <image name="NSStatusNone" width="16" height="16"/>
+        <image name="NSStatusUnavailable" width="16" height="16"/>
         <image name="NSStopProgressTemplate" width="11" height="11"/>
     </resources>
 </document>

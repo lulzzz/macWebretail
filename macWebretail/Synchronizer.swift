@@ -30,7 +30,7 @@ class Synchronizer {
 	
 	static let shared = Synchronizer()
 	
-	private let baseURL = "http://ec2-35-157-208-60.eu-central-1.compute.amazonaws.com/"
+	private let baseURL = "http://localhost:8181/" //"http://ec2-35-157-208-60.eu-central-1.compute.amazonaws.com/"
 	private let deviceName = Host.current().localizedName!
 	private var deviceToken: String = ""
 	var isSyncing: Bool = false
