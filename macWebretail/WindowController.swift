@@ -13,6 +13,7 @@ class WindowController: NSWindowController {
 	
 	@IBOutlet weak var statusMenu: NSMenu!
 
+    let currentDirectoryPath = "\(FileManager.default.currentDirectoryPath)/macWebretail.app/Contents/Resources"
 	let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     var task: Process = Process()
 
@@ -21,11 +22,17 @@ class WindowController: NSWindowController {
 				
         let icon = NSImage.init(named: "statusIcon")
 		//icon?.isTemplate = true // best for dark mode
-		statusItem.image = icon
-		statusItem.title = "Webretail"
-		statusItem.menu = statusMenu
+        statusItem.image = icon
+        statusItem.menu = statusMenu
 		
 		Synchronizer.shared.iCloudUserIDAsync()
+
+        if !FileManager.default.fileExists(atPath: currentDirectoryPath + "/Webretail") {
+            task.currentDirectoryPath = currentDirectoryPath
+            task.launchPath = "/usr/bin/unzip"
+            task.arguments = [currentDirectoryPath + "/Webretail.zip"]
+            task.launch()
+        }
     }
     
 	@IBAction func dashboardClicked(_ sender: NSMenuItem) {
@@ -84,11 +91,11 @@ class WindowController: NSWindowController {
     @IBAction func startStopWebretail(_ sender: NSMenuItem) {
         if sender.title == "Start server" {
             task = Process()
-            task.currentDirectoryPath = "/Users/gerardogrisolini/Projects/github.com/Webretail"
-            task.launchPath = "\(self.task.currentDirectoryPath)/.build/debug/Webretail"
+            task.currentDirectoryPath = currentDirectoryPath
+            task.launchPath = currentDirectoryPath + "/Webretail"
             task.arguments = []
             task.launch()
-
+            
             sender.title = "Stop server"
             sender.image = NSImage.init(named: "NSStatusAvailable")
        } else {
