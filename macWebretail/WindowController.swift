@@ -43,7 +43,8 @@ class WindowController: NSWindowController {
     }
     
 	@IBAction func dashboardClicked(_ sender: NSMenuItem) {
-		self.window?.orderFront(self)
+		self.window?.makeKeyAndOrderFront(self)
+        NSApp.activate(ignoringOtherApps: true)
 	}
 	
 	@IBAction func quitClicked(_ sender: NSMenuItem) {
