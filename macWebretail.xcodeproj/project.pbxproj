@@ -22,6 +22,7 @@
 		56DBC8711ED36A81009FF9F3 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56DBC8701ED36A81009FF9F3 /* HeaderView.xib */; };
 		56DBC8731ED36BB6009FF9F3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DBC8721ED36BB6009FF9F3 /* HeaderView.swift */; };
 		9ABF1BF11EE0CF7F00737789 /* webretail.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9ABF1BF01EE0CF7F00737789 /* webretail.zip */; };
+		9ADB39CC1EE1725500856825 /* ServerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADB39CB1EE1725500856825 /* ServerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		56DBC8701ED36A81009FF9F3 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		56DBC8721ED36BB6009FF9F3 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		9ABF1BF01EE0CF7F00737789 /* webretail.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = webretail.zip; sourceTree = "<group>"; };
+		9ADB39CB1EE1725500856825 /* ServerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				56DBC8701ED36A81009FF9F3 /* HeaderView.xib */,
 				568A1B7A1ECF9509005C29CF /* Main.storyboard */,
 				56B4E9F41ED839AE00931F83 /* BarcodePDFPage.swift */,
+				9ADB39CB1EE1725500856825 /* ServerController.swift */,
 			);
 			path = macWebretail;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ADB39CC1EE1725500856825 /* ServerController.swift in Sources */,
 				56B933291ED704C90043D196 /* AppDelegate.swift in Sources */,
 				56DBC8731ED36BB6009FF9F3 /* HeaderView.swift in Sources */,
 				56DBC86E1ED34692009FF9F3 /* CollectionViewItem.swift in Sources */,

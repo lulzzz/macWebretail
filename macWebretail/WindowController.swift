@@ -11,12 +11,12 @@ import Quartz
 
 class WindowController: NSWindowController {
 	
+    @IBOutlet weak var statusServer: NSMenuItem!
 	@IBOutlet weak var statusMenu: NSMenu!
 
-    let currentDirectoryPath = "\(FileManager.default.currentDirectoryPath)/macWebretail.app/Contents/Resources"
 	let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-    var task: Process = Process()
-
+    let server: ServerController = ServerController()
+    
 	override func windowDidLoad() {
         super.windowDidLoad()
 				
@@ -25,23 +25,21 @@ class WindowController: NSWindowController {
         statusItem.image = icon
         statusItem.menu = statusMenu
 		
-		Synchronizer.shared.iCloudUserIDAsync()
+        syncStatus()
 
-        if !FileManager.default.fileExists(atPath: currentDirectoryPath + "/Webretail") {
-            task.currentDirectoryPath = currentDirectoryPath
-            task.launchPath = "/usr/bin/unzip"
-            task.arguments = [currentDirectoryPath + "/Webretail.zip"]
-            task.launch()
-        }
+        Synchronizer.shared.iCloudUserIDAsync()
     }
-    
+        
 	@IBAction func dashboardClicked(_ sender: NSMenuItem) {
 		self.window?.orderFront(self)
 	}
 	
 	@IBAction func quitClicked(_ sender: NSMenuItem) {
-        task.interrupt()
-        task.terminate()
+        if server.isRunning {
+            if dialogOKCancel(question: "Stop the server ?", text: "Otherwise the server will be ready.") {
+                server.stop()
+            }
+        }
 		NSApplication.shared().terminate(self)
 	}
 	
@@ -88,27 +86,36 @@ class WindowController: NSWindowController {
          }
 	}
     
-    @IBAction func startStopWebretail(_ sender: NSMenuItem) {
-        if sender.title == "Start server" {
-            task = Process()
-            task.currentDirectoryPath = currentDirectoryPath
-            task.launchPath = currentDirectoryPath + "/Webretail"
-            task.arguments = []
-            task.launch()
-            
-            sender.title = "Stop server"
-            sender.image = NSImage.init(named: "NSStatusAvailable")
-       } else {
-            task.interrupt()
-            task.terminate()
-            
-            sender.title = "Start server"
-            sender.image = NSImage.init(named: "NSStatusUnavailable")
-        }
+    @IBAction func startWebretail(_ sender: NSMenuItem) {
+        server.start()
+        syncStatus()
+    }
+
+    @IBAction func stopWebretail(_ sender: NSMenuItem) {
+        server.stop()
+        syncStatus()
     }
 
     @IBAction func openHome(_ sender: NSMenuItem) {
         let path = URL(string: "http://localhost:8181/")!
         NSWorkspace.shared().open(path)
+    }
+    
+    func syncStatus() {
+        if server.isRunning {
+            statusServer.image = NSImage.init(named: "NSStatusAvailable")
+        } else {
+            statusServer.image = NSImage.init(named: "NSStatusUnavailable")
+        }
+    }
+
+    func dialogOKCancel(question: String, text: String) -> Bool {
+        let popup: NSAlert = NSAlert()
+        popup.messageText = question
+        popup.informativeText = text
+        popup.alertStyle = NSAlertStyle.warning
+        popup.addButton(withTitle: "Yes")
+        popup.addButton(withTitle: "No")
+        return popup.runModal() == NSAlertFirstButtonReturn
     }
 }

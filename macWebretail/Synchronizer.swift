@@ -61,6 +61,7 @@ class Synchronizer {
 				do {
 					let items = try JSONSerialization.jsonObject(with: usableData, options: .allowFragments) as! [NSDictionary]
 					
+                    self.movements.removeAll()
 					for item in items {
 						let causal = item["movementCausal"] as! [String: Any]
 						let desc = item["movementDesc"] as! String

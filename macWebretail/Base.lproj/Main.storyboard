@@ -15,7 +15,7 @@
                     <window key="window" title="Webretail" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="rye-wi-TUo" customClass="WindowTitleless" customModule="macWebretail" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES" fullSizeContentView="YES"/>
                         <rect key="contentRect" x="800" y="398" width="640" height="640"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
                         <toolbar key="toolbar" implicitIdentifier="A69EC4FD-36F9-4A25-8AA3-A33F1B9BC240" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="qMz-09-sSK">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="lLj-6Y-EZx"/>
@@ -90,6 +90,7 @@
                     </touchBar>
                     <connections>
                         <outlet property="statusMenu" destination="ytH-qW-Vde" id="hd0-vA-ipv"/>
+                        <outlet property="statusServer" destination="tyE-m7-vmJ" id="9tB-mk-62V"/>
                         <segue destination="RVu-Yd-wbl" kind="relationship" relationship="window.shadowedContentViewController" id="diB-pL-Uvn"/>
                     </connections>
                 </windowController>
@@ -108,17 +109,20 @@
                                 <action selector="dashboardClicked:" target="Lod-yH-OBc" id="Kia-E4-wJM"/>
                             </connections>
                         </menuItem>
-                        <menuItem title=" Refresh" image="NSRefreshTemplate" id="1Au-6E-Vum">
+                        <menuItem isSeparatorItem="YES" id="UTN-zM-HK6"/>
+                        <menuItem title="Server" image="NSStatusUnavailable" id="tyE-m7-vmJ">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title=" Start" image="NSRefreshFreestandingTemplate" id="1Au-6E-Vum">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <action selector="refreshClicked:" target="Lod-yH-OBc" id="xxf-6i-mkY"/>
+                                <action selector="startWebretail:" target="Lod-yH-OBc" id="HFZ-d9-TGb"/>
                             </connections>
                         </menuItem>
-                        <menuItem isSeparatorItem="YES" id="UTN-zM-HK6"/>
-                        <menuItem title="Start server" image="NSStatusUnavailable" id="tyE-m7-vmJ">
+                        <menuItem title=" Stop" image="NSStopProgressFreestandingTemplate" id="IdL-nm-tNW">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <action selector="startStopWebretail:" target="Lod-yH-OBc" id="rzM-Mj-UcN"/>
+                                <action selector="stopWebretail:" target="Lod-yH-OBc" id="mHc-9m-0Y7"/>
                             </connections>
                         </menuItem>
                         <menuItem isSeparatorItem="YES" id="x98-MG-MH9"/>
@@ -206,8 +210,10 @@
         <image name="NSHomeTemplate" width="14" height="14"/>
         <image name="NSIconViewTemplate" width="10" height="10"/>
         <image name="NSPathTemplate" width="16" height="10"/>
+        <image name="NSRefreshFreestandingTemplate" width="14" height="14"/>
         <image name="NSRefreshTemplate" width="11" height="15"/>
         <image name="NSStatusUnavailable" width="16" height="16"/>
+        <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
         <image name="NSStopProgressTemplate" width="11" height="11"/>
     </resources>
 </document>
