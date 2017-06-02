@@ -10,8 +10,19 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        
+        var mainWindow = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "mainWindow")
+
+//        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+//        guard let mainWC = storyboard.instantiateController(withIdentifier: "MainController") as? WindowController else {
+//            fatalError("Error getting main window controller")
+//        }
+//        // optionally store the reference here
+//        self.mainWindowController = mainWC
+//        mainWC.window?.makeKeyAndOrderFront(nil) // or use `.showWindow(self)`    
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {

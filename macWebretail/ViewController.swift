@@ -17,8 +17,8 @@ class ViewController: NSViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		configureCollectionView()
+
+        configureCollectionView()
 	}
 	
 	override func viewDidAppear() {

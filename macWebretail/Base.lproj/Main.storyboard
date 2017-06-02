@@ -11,16 +11,16 @@
         <!--Window Controller-->
         <scene sceneID="Wcb-LR-ssv">
             <objects>
-                <windowController showSeguePresentationStyle="single" id="Lod-yH-OBc" customClass="WindowController" customModule="macWebretail" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Webretail" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="rye-wi-TUo" customClass="WindowTitleless" customModule="macWebretail" customModuleProvider="target">
+                <windowController showSeguePresentationStyle="single" id="Lod-yH-OBc" customClass="WindowController" customModule="Webretail" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" identifier="mainWindow" title="Webretail" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="rye-wi-TUo" customClass="WindowTitleless" customModule="Webretail" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES" fullSizeContentView="YES"/>
-                        <rect key="contentRect" x="800" y="398" width="640" height="640"/>
+                        <rect key="contentRect" x="800" y="398" width="570" height="700"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
                         <toolbar key="toolbar" implicitIdentifier="A69EC4FD-36F9-4A25-8AA3-A33F1B9BC240" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="qMz-09-sSK">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="lLj-6Y-EZx"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="v4a-nd-6nw"/>
-                                <toolbarItem implicitItemIdentifier="CD3FD6DF-FB00-400A-8167-E749B036D35E" label="" paletteLabel="Refresh" image="NSRefreshTemplate" id="hWE-Eb-bie">
+                                <toolbarItem implicitItemIdentifier="CD3FD6DF-FB00-400A-8167-E749B036D35E" label="Refresh" paletteLabel="Refresh" image="NSRefreshTemplate" id="hWE-Eb-bie">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="64" height="20"/>
                                     <size key="maxSize" width="113" height="40"/>
@@ -36,7 +36,7 @@
                                         <action selector="refreshClicked:" target="Lod-yH-OBc" id="rEu-vN-tIj"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="6B719795-0C0D-4A34-8578-578196407A8D" label="" paletteLabel="Barcode" image="NSPathTemplate" id="UoM-Nn-b0l">
+                                <toolbarItem implicitItemIdentifier="6B719795-0C0D-4A34-8578-578196407A8D" label="Barcode" paletteLabel="Barcode" image="NSPathTemplate" id="UoM-Nn-b0l">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="64" height="20"/>
                                     <size key="maxSize" width="113" height="40"/>
@@ -55,33 +55,98 @@
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="v4a-nd-6nw"/>
-                                <toolbarItem reference="UoM-Nn-b0l"/>
                                 <toolbarItem reference="hWE-Eb-bie"/>
+                                <toolbarItem reference="UoM-Nn-b0l"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
                     <touchBar key="touchBar" id="pZ3-o4-AIv">
                         <touchBarItems>
-                            <touchBarItem id="MLk-LJ-yHI">
+                            <touchBarItem id="xqU-Pe-nWX" userLabel="Home">
+                                <viewController key="viewController" id="VsH-wN-pRj">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZA9-QP-RbO">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Home" bezelStyle="rounded" image="NSHomeTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="67X-Fv-LQc">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="openHome:" target="Lod-yH-OBc" id="CR6-d8-i3I"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="90" height="30"/>
+                            </touchBarItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFixedSpaceSmall" id="VKQ-gz-BLS"/>
+                            <touchBarItem id="2ay-2P-Ahb" userLabel="Refresh">
+                                <viewController key="viewController" id="Wfk-Z5-LgL">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EQj-Bt-Lwg">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" image="NSRefreshTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b57-S2-8qc">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="refreshClicked:" target="Lod-yH-OBc" id="TEc-dt-5OD"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="108" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="MLk-LJ-yHI" userLabel="Dashboard">
                                 <viewController key="viewController" id="oQ8-wZ-PmA">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MAW-Jh-v8j">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
-                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSPathTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oOU-LW-iAD">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Barcode" bezelStyle="rounded" image="NSPathTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oOU-LW-iAD">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="barcodeClicked:" target="Lod-yH-OBc" id="CLb-Rk-ScG"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="108" height="30"/>
+                            </touchBarItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="gXS-Fw-tb5"/>
+                            <touchBarItem id="hbH-Fp-b1t" userLabel="Webretail">
+                                <viewController key="viewController" id="p8u-wh-KOB">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="00o-nf-8va">
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Webretail" bezelStyle="rounded" image="NSStatusAvailable" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y1Q-0X-qgm">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
                                         </buttonCell>
                                     </button>
                                 </viewController>
-                                <size key="designTimeSize" width="90" height="30"/>
+                                <size key="designTimeSize" width="126" height="30"/>
                             </touchBarItem>
-                            <touchBarItem id="2ay-2P-Ahb">
-                                <viewController key="viewController" id="Wfk-Z5-LgL">
-                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EQj-Bt-Lwg">
+                            <touchBarItem id="zkI-wH-uT6" userLabel="Start">
+                                <viewController key="viewController" id="pkj-iQ-X5l">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2z8-SR-5ub">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
-                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSRefreshTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b57-S2-8qc">
+                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" image="NSRefreshFreestandingTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yKW-4R-38t">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="startWebretail:" target="Lod-yH-OBc" id="5IT-86-pex"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="90" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="TOJ-nn-1ch" userLabel="Stop">
+                                <viewController key="viewController" id="g6Q-Wg-O03">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dng-zs-r4K">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" image="NSStopProgressFreestandingTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RjJ-Vh-49R">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="stopWebretail:" target="Lod-yH-OBc" id="z8n-sk-ld8"/>
+                                        </connections>
                                     </button>
                                 </viewController>
                                 <size key="designTimeSize" width="90" height="30"/>
@@ -89,6 +154,7 @@
                         </touchBarItems>
                     </touchBar>
                     <connections>
+                        <outlet property="statusBarServer" destination="00o-nf-8va" id="5Qw-ze-1hM"/>
                         <outlet property="statusMenu" destination="ytH-qW-Vde" id="hd0-vA-ipv"/>
                         <outlet property="statusServer" destination="tyE-m7-vmJ" id="9tB-mk-62V"/>
                         <segue destination="RVu-Yd-wbl" kind="relationship" relationship="window.shadowedContentViewController" id="diB-pL-Uvn"/>
@@ -97,7 +163,7 @@
                 <customObject id="IOk-AD-Zup" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <menu id="ytH-qW-Vde">
                     <items>
-                        <menuItem title="Webretail" image="NSHomeTemplate" id="fxb-5i-Jp7">
+                        <menuItem title="Home" image="NSHomeTemplate" id="fxb-5i-Jp7">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
                                 <action selector="openHome:" target="Lod-yH-OBc" id="fUj-fL-Oys"/>
@@ -109,10 +175,11 @@
                                 <action selector="dashboardClicked:" target="Lod-yH-OBc" id="Kia-E4-wJM"/>
                             </connections>
                         </menuItem>
-                        <menuItem isSeparatorItem="YES" id="UTN-zM-HK6"/>
-                        <menuItem title="Server" image="NSStatusUnavailable" id="tyE-m7-vmJ">
+                        <menuItem isSeparatorItem="YES" id="x98-MG-MH9"/>
+                        <menuItem title="Webretail" image="NSStatusUnavailable" id="tyE-m7-vmJ">
                             <modifierMask key="keyEquivalentModifierMask"/>
                         </menuItem>
+                        <menuItem isSeparatorItem="YES" id="IgY-sY-drN"/>
                         <menuItem title=" Start" image="NSRefreshFreestandingTemplate" id="1Au-6E-Vum">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
@@ -125,7 +192,6 @@
                                 <action selector="stopWebretail:" target="Lod-yH-OBc" id="mHc-9m-0Y7"/>
                             </connections>
                         </menuItem>
-                        <menuItem isSeparatorItem="YES" id="x98-MG-MH9"/>
                         <menuItem title="Settings" image="NSActionTemplate" id="Wwg-gZ-NVa">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
@@ -148,19 +214,19 @@
         <scene sceneID="7x1-hv-eg6">
             <objects>
                 <customObject id="2Ky-hD-SDQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController id="RVu-Yd-wbl" customClass="ViewController" customModule="macWebretail" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RVu-Yd-wbl" customClass="ViewController" customModule="Webretail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="dXP-nz-22t">
-                        <rect key="frame" x="0.0" y="0.0" width="640" height="640"/>
+                        <rect key="frame" x="0.0" y="0.0" width="570" height="700"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r36-cX-Bx3">
-                                <rect key="frame" x="0.0" y="0.0" width="640" height="640"/>
+                                <rect key="frame" x="0.0" y="0.0" width="570" height="700"/>
                                 <clipView key="contentView" drawsBackground="NO" id="chJ-Gc-YdR">
-                                    <rect key="frame" x="1" y="1" width="638" height="638"/>
+                                    <rect key="frame" x="1" y="1" width="568" height="698"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView selectable="YES" id="pnb-78-qJv">
-                                            <rect key="frame" x="0.0" y="0.0" width="638" height="638"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="698"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="5BB-x3-Thh">
                                                 <size key="itemSize" width="50" height="50"/>
@@ -175,25 +241,25 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Rx1-4O-lGV">
-                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <rect key="frame" x="1" y="-15" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="wGh-2L-mhR">
-                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <rect key="frame" x="-15" y="1" width="16" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="46g-4g-Jsu">
-                                <rect key="frame" x="304" y="304" width="32" height="32"/>
+                                <rect key="frame" x="269" y="334" width="32" height="32"/>
                             </progressIndicator>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="r36-cX-Bx3" secondAttribute="trailing" id="0S2-3v-sc7"/>
-                            <constraint firstItem="46g-4g-Jsu" firstAttribute="centerY" secondItem="r36-cX-Bx3" secondAttribute="centerY" id="7Ce-sO-6aO"/>
-                            <constraint firstItem="r36-cX-Bx3" firstAttribute="leading" secondItem="dXP-nz-22t" secondAttribute="leading" id="Zj4-ac-ZTp"/>
-                            <constraint firstItem="r36-cX-Bx3" firstAttribute="top" secondItem="dXP-nz-22t" secondAttribute="top" id="ede-0u-qYB"/>
-                            <constraint firstItem="46g-4g-Jsu" firstAttribute="centerX" secondItem="r36-cX-Bx3" secondAttribute="centerX" id="kqR-vj-9pI"/>
-                            <constraint firstAttribute="bottom" secondItem="r36-cX-Bx3" secondAttribute="bottom" id="mGy-ZD-0Pm"/>
+                            <constraint firstItem="r36-cX-Bx3" firstAttribute="top" secondItem="dXP-nz-22t" secondAttribute="top" id="3Cm-VC-csP"/>
+                            <constraint firstItem="r36-cX-Bx3" firstAttribute="leading" secondItem="dXP-nz-22t" secondAttribute="leading" id="AAd-zW-DIY"/>
+                            <constraint firstAttribute="trailing" secondItem="r36-cX-Bx3" secondAttribute="trailing" id="e3a-3N-2vU"/>
+                            <constraint firstItem="r36-cX-Bx3" firstAttribute="centerY" secondItem="46g-4g-Jsu" secondAttribute="centerY" id="fmy-XC-4uu"/>
+                            <constraint firstAttribute="bottom" secondItem="r36-cX-Bx3" secondAttribute="bottom" id="n05-wi-xPl"/>
+                            <constraint firstItem="46g-4g-Jsu" firstAttribute="centerX" secondItem="r36-cX-Bx3" secondAttribute="centerX" id="rXX-DT-SdQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -202,7 +268,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="399" y="11"/>
+            <point key="canvasLocation" x="387" y="-256"/>
         </scene>
     </scenes>
     <resources>
@@ -212,6 +278,7 @@
         <image name="NSPathTemplate" width="16" height="10"/>
         <image name="NSRefreshFreestandingTemplate" width="14" height="14"/>
         <image name="NSRefreshTemplate" width="11" height="15"/>
+        <image name="NSStatusAvailable" width="16" height="16"/>
         <image name="NSStatusUnavailable" width="16" height="16"/>
         <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
         <image name="NSStopProgressTemplate" width="11" height="11"/>

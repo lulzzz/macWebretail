@@ -10,9 +10,12 @@ import Foundation
 
 class ServerController {
 
-    let currentDirectoryPath = "\(FileManager.default.currentDirectoryPath)/macWebretail.app/Contents/Resources"
+    let currentDirectoryPath = FileManager.default.currentDirectoryPath == "/"
+        ? "/Applications/Webretail.app/Contents/Resources"
+        : "\(FileManager.default.currentDirectoryPath)/Webretail.app/Contents/Resources"
     
     init() {
+        
         if !FileManager.default.fileExists(atPath: currentDirectoryPath + "/Webretail") {
             let task = Process()
             task.currentDirectoryPath = currentDirectoryPath

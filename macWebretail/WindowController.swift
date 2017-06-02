@@ -12,13 +12,21 @@ import Quartz
 class WindowController: NSWindowController {
 	
     @IBOutlet weak var statusServer: NSMenuItem!
+    @IBOutlet weak var statusBarServer: NSButton!
 	@IBOutlet weak var statusMenu: NSMenu!
-
+    
 	let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     let server: ServerController = ServerController()
     
 	override func windowDidLoad() {
         super.windowDidLoad()
+
+        if let window = window, let screen = window.screen {
+            let screenRect = screen.visibleFrame
+            let newOriginX = screenRect.maxX - window.frame.width
+            let newOriginY = screenRect.maxY - window.frame.height
+            window.setFrameOrigin(NSPoint(x: newOriginX, y: newOriginY))
+        }
 				
         let icon = NSImage.init(named: "statusIcon")
 		//icon?.isTemplate = true // best for dark mode
@@ -28,8 +36,12 @@ class WindowController: NSWindowController {
         syncStatus()
 
         Synchronizer.shared.iCloudUserIDAsync()
+
+//        DispatchQueue.main.async {
+//            self.close()
+//        }
     }
-        
+    
 	@IBAction func dashboardClicked(_ sender: NSMenuItem) {
 		self.window?.orderFront(self)
 	}
@@ -49,7 +61,7 @@ class WindowController: NSWindowController {
 	}
 
 	@IBAction func settingsClicked(_ sender: Any) {
-		self.window?.close()
+		self.close()
 	}
 	
 	@IBAction func barcodeClicked(_ sender: Any) {
@@ -86,17 +98,17 @@ class WindowController: NSWindowController {
          }
 	}
     
-    @IBAction func startWebretail(_ sender: NSMenuItem) {
+    @IBAction func startWebretail(_ sender: Any) {
         server.start()
         syncStatus()
     }
 
-    @IBAction func stopWebretail(_ sender: NSMenuItem) {
+    @IBAction func stopWebretail(_ sender: Any) {
         server.stop()
         syncStatus()
     }
 
-    @IBAction func openHome(_ sender: NSMenuItem) {
+    @IBAction func openHome(_ sender: Any) {
         let path = URL(string: "http://localhost:8181/")!
         NSWorkspace.shared().open(path)
     }
@@ -104,8 +116,10 @@ class WindowController: NSWindowController {
     func syncStatus() {
         if server.isRunning {
             statusServer.image = NSImage.init(named: "NSStatusAvailable")
+            statusBarServer.image = NSImage.init(named: "NSStatusAvailable")
         } else {
             statusServer.image = NSImage.init(named: "NSStatusUnavailable")
+            statusBarServer.image = NSImage.init(named: "NSStatusUnavailable")
         }
     }
 

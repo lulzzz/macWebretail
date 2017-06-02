@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -79,13 +79,14 @@
 		568A1B701ECF9509005C29CF /* macWebretail */ = {
 			isa = PBXGroup;
 			children = (
-				9A8752301EDFA38800A58242 /* Resources */,
 				56CDBAEE1ED659080027D91D /* macWebretail.entitlements */,
 				568A1B7D1ECF9509005C29CF /* Info.plist */,
 				56B933281ED704C90043D196 /* AppDelegate.swift */,
+				56B4E9F41ED839AE00931F83 /* BarcodePDFPage.swift */,
 				56DBC86C1ED34692009FF9F3 /* CollectionViewItem.swift */,
 				56BCA3971ED5C96B004E956E /* Extensions.swift */,
 				56DBC8721ED36BB6009FF9F3 /* HeaderView.swift */,
+				9ADB39CB1EE1725500856825 /* ServerController.swift */,
 				56CDBAEC1ED64F260027D91D /* Synchronizer.swift */,
 				568A1B731ECF9509005C29CF /* ViewController.swift */,
 				56BCA3951ED5677F004E956E /* WindowController.swift */,
@@ -94,8 +95,7 @@
 				56DBC86D1ED34692009FF9F3 /* CollectionViewItem.xib */,
 				56DBC8701ED36A81009FF9F3 /* HeaderView.xib */,
 				568A1B7A1ECF9509005C29CF /* Main.storyboard */,
-				56B4E9F41ED839AE00931F83 /* BarcodePDFPage.swift */,
-				9ADB39CB1EE1725500856825 /* ServerController.swift */,
+				9A8752301EDFA38800A58242 /* Resources */,
 			);
 			path = macWebretail;
 			sourceTree = "<group>";
@@ -119,9 +119,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		568A1B6D1ECF9508005C29CF /* macWebretail */ = {
+		568A1B6D1ECF9508005C29CF /* Webretail */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 568A1B801ECF9509005C29CF /* Build configuration list for PBXNativeTarget "macWebretail" */;
+			buildConfigurationList = 568A1B801ECF9509005C29CF /* Build configuration list for PBXNativeTarget "Webretail" */;
 			buildPhases = (
 				568A1B6A1ECF9508005C29CF /* Sources */,
 				568A1B6B1ECF9508005C29CF /* Frameworks */,
@@ -131,7 +131,7 @@
 			);
 			dependencies = (
 			);
-			name = macWebretail;
+			name = Webretail;
 			productName = macWebretail;
 			productReference = 568A1B6E1ECF9509005C29CF /* macWebretail.app */;
 			productType = "com.apple.product-type.application";
@@ -161,8 +161,8 @@
 					};
 				};
 			};
-			buildConfigurationList = 568A1B691ECF9508005C29CF /* Build configuration list for PBXProject "macWebretail" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 568A1B691ECF9508005C29CF /* Build configuration list for PBXProject "Webretail" */;
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -174,7 +174,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				568A1B6D1ECF9508005C29CF /* macWebretail */,
+				568A1B6D1ECF9508005C29CF /* Webretail */,
 			);
 		};
 /* End PBXProject section */
@@ -357,7 +357,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		568A1B691ECF9508005C29CF /* Build configuration list for PBXProject "macWebretail" */ = {
+		568A1B691ECF9508005C29CF /* Build configuration list for PBXProject "Webretail" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				568A1B7E1ECF9509005C29CF /* Debug */,
@@ -366,7 +366,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		568A1B801ECF9509005C29CF /* Build configuration list for PBXNativeTarget "macWebretail" */ = {
+		568A1B801ECF9509005C29CF /* Build configuration list for PBXNativeTarget "Webretail" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				568A1B811ECF9509005C29CF /* Debug */,
